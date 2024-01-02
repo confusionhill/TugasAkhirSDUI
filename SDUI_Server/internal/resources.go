@@ -1,4 +1,4 @@
-package main
+package internal
 
 import (
 	"github.com/jmoiron/sqlx"
@@ -6,7 +6,7 @@ import (
 )
 
 type MainResources struct {
-	db *sqlx.DB
+	Db *sqlx.DB
 }
 
 func NewRsc() (*MainResources, error) {
@@ -15,6 +15,6 @@ func NewRsc() (*MainResources, error) {
 		return nil, err
 	}
 	return &MainResources{
-		db: db,
+		Db: db,
 	}, nil
 }
