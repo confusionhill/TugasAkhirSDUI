@@ -1,0 +1,31 @@
+{
+    "title": "SDUI View",
+    "components": [
+        {
+            "type": "stack".
+            "properties": {
+                "type": "vertical",
+                "children": [
+                        {
+                            "type": "text",
+                            "properties": {
+                                "message": "hello, world!"
+                            }
+                        },
+                        {
+                            "type": "spacer",
+                            "properties": {
+                                "length": 10.1
+                            }
+                        },
+                        {
+                            "type": "text",
+                            "properties": {
+                                "message": "welcome to mobile legend!"
+                            }
+                        }
+                ]
+            }
+        },
+    ]
+}
