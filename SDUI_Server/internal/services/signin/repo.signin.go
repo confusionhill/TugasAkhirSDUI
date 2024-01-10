@@ -1,6 +1,7 @@
 package signin
 
 import (
+	"SDUI_Server/internal"
 	"context"
 	"github.com/jmoiron/sqlx"
 )
@@ -16,5 +17,5 @@ func NewRepo(db *sqlx.DB) (*Repository, error) {
 }
 
 func (r *Repository) SignInUser(ctx context.Context, username string, password string) (string, error) {
-	return "this_is_token", nil
+	return internal.AuthKey, nil
 }

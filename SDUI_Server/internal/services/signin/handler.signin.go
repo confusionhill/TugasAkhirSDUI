@@ -1,6 +1,10 @@
 package signin
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"SDUI_Server/internal/model/dto"
+	"github.com/gofiber/fiber/v2"
+	"net/http"
+)
 
 type Handler struct {
 	ui   *UserInterface
@@ -20,8 +24,17 @@ func (h *Handler) Register(sdui fiber.Router, base fiber.Router) {
 }
 
 func (h *Handler) SignInUserHandler(c *fiber.Ctx) error {
-	resp, _ := h.repo.SignInUser(c.Context(), "", "")
-	return c.JSON(resp)
+	req := dto.SignInRequestDTO{}
+	if err := c.BodyParser(&req); err != nil {
+		return c.Status(http.StatusBadRequest).SendString("cannot handle request")
+	}
+	if req.Username != "test123" && req.Password != "test123" {
+		return c.Status(404).SendString("user not found")
+	}
+	authKey, _ := h.repo.SignInUser(c.Context(), "", "")
+	return c.JSON(map[string]string{
+		"token": authKey,
+	})
 }
 
 func (h *Handler) SignInUserInterfaceHandler(ctx *fiber.Ctx) error {
