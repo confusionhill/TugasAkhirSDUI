@@ -1,7 +1,6 @@
 package item
 
 import (
-	"fmt"
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -18,36 +17,57 @@ func NewHandler(ui *UserInterface, repo *Repository) *Handler {
 }
 
 func (h *Handler) Register(sdui fiber.Router, base fiber.Router) {
+	// sdui
 	sdui.Get("/item", h.GetListOfItemInterfaceHandler)
 	sdui.Get("/item/:id", h.GetItemDetailInterfaceHandler)
+	// base
 	base.Get("/item", h.GetListOfItemsHandler)
 	base.Get("/item/:id", h.GetItemDetailHandler)
 }
 
 func (h *Handler) GetListOfItemsHandler(c *fiber.Ctx) error {
-	//_, ok := c.GetReqHeaders()["bearer"]
-	//if !ok {
-	//
-	//}
-	return c.SendString("items from base")
+	page := c.QueryInt("page", 1)
+	limit := c.QueryInt("limit", 10)
+	items, _ := h.repo.GetItems(c.Context(), uint64(page), uint64(limit))
+	return c.JSON(items)
 }
 
 func (h *Handler) GetItemDetailHandler(c *fiber.Ctx) error {
 	id, err := c.ParamsInt("id")
 	if err != nil {
-		return err
+		return c.Status(404).SendString("cannot find item")
 	}
-	return c.SendString(fmt.Sprintf("item id = %d from base", id))
+	item, err := h.repo.GetItemById(c.Context(), int64(id))
+	if err != nil {
+		return c.Status(404).SendString("cannot find item")
+	}
+	return c.JSON(item)
 }
 
-func (h *Handler) GetListOfItemInterfaceHandler(ctx *fiber.Ctx) error {
-	return ctx.SendString("items from sdui")
+func (h *Handler) GetListOfItemInterfaceHandler(c *fiber.Ctx) error {
+	page := c.QueryInt("page", 1)
+	limit := c.QueryInt("limit", 10)
+	items, err := h.repo.GetItems(c.Context(), uint64(page), uint64(limit))
+	if err != nil {
+		return c.JSON(items)
+	}
+	components := h.ui.CreateItemCardInterface(items)
+	return c.JSON(components)
 }
 
 func (h *Handler) GetItemDetailInterfaceHandler(ctx *fiber.Ctx) error {
+	//_, ok := c.GetReqHeaders()["bearer"]
+	//if !ok {
+	//
+	//}
 	id, err := ctx.ParamsInt("id")
 	if err != nil {
-		return err
+		return ctx.Status(404).SendString("cannot find item")
 	}
-	return ctx.SendString(fmt.Sprintf("item id = %d from sdui", id))
+	item, err := h.repo.GetItemById(ctx.Context(), int64(id))
+	if err != nil {
+		return ctx.Status(404).SendString("cannot find item")
+	}
+	component := h.ui.CreateItemDetailInterface(*item)
+	return ctx.JSON(component)
 }
