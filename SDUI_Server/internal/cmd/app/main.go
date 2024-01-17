@@ -2,6 +2,7 @@ package main
 
 import (
 	"SDUI_Server/internal"
+	"SDUI_Server/internal/model/config"
 	"SDUI_Server/internal/services/item"
 	"SDUI_Server/internal/services/signin"
 	"github.com/gofiber/fiber/v2"
@@ -9,12 +10,19 @@ import (
 )
 
 func main() {
-	rsc, err := internal.NewRsc()
+	cfg, err := config.New()
 	if err != nil {
 		log.Fatal(err)
 		return
 	}
-	app := fiber.New()
+	rsc, err := internal.NewRsc(cfg)
+	if err != nil {
+		log.Fatal(err)
+		return
+	}
+	app := fiber.New(fiber.Config{
+		AppName: cfg.App,
+	})
 	sduiRoute := app.Group("/sdui")
 	baseRoute := app.Group("/base")
 	sduiRoute.Get("", func(ctx *fiber.Ctx) error {
@@ -42,5 +50,5 @@ func main() {
 	signInHandler := signin.NewHandler(signInUI, signInRepo)
 	signInHandler.Register(sduiRoute, baseRoute)
 
-	app.Listen(":4389")
+	app.Listen(cfg.Port)
 }

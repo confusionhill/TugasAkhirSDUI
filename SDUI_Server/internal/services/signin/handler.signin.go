@@ -3,6 +3,7 @@ package signin
 import (
 	"SDUI_Server/internal"
 	"SDUI_Server/internal/model/dto"
+	"fmt"
 	"github.com/gofiber/fiber/v2"
 	"net/http"
 )
@@ -21,14 +22,17 @@ func NewHandler(ui *UserInterface, repo *Repository) *Handler {
 
 func (h *Handler) Register(sdui fiber.Router, base fiber.Router) {
 	sdui.Post("/signin", h.SignInUserInterfaceHandler)
+	sdui.Get("/profile", h.GetUserInformationInterfaceHandler)
 	base.Post("/signin", h.SignInUserHandler)
-	base.Get("/profile")
+	base.Get("/profile", h.GetUserInformationHandler)
 }
 
 func (h *Handler) GetUserInformationHandler(c *fiber.Ctx) error {
-	if isAuth := internal.GetAuthStatus(c); !isAuth {
+	isAuth := internal.GetAuthStatus(c)
+	if !isAuth {
 		return c.Status(404).SendString("user not found")
 	}
+	fmt.Println(isAuth)
 	info := h.repo.GetUserInformation(c.Context())
 	return c.JSON(info)
 }

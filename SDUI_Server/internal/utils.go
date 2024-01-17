@@ -6,5 +6,5 @@ const AuthKey = "lucukamudek"
 
 func GetAuthStatus(ctx *fiber.Ctx) bool {
 	token := ctx.GetRespHeader("Authorization")
-	return token != AuthKey
+	return token == AuthKey
 }

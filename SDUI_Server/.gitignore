@@ -36,5 +36,8 @@
 # GoLand directories
 .idea/
 
+# SECRET
+files/secrets.config.json
+
 # End of file
 
