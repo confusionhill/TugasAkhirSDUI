@@ -55,3 +55,16 @@ func (ui *UserInterface) CreateItemDetailInterface(item entity.ItemEntity) []com
 		},
 	}
 }
+
+func (ui *UserInterface) CreateNotFoundInterface() []components.Component {
+	return []components.Component{
+		{
+			Type: components.TEXT_TYPE,
+			Information: components.TextComponentInfo{
+				Uid:     uuid.NewString(),
+				Message: "Cannot Find Item",
+				Size:    10,
+			},
+		},
+	}
+}

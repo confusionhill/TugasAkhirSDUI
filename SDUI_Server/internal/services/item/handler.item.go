@@ -66,7 +66,7 @@ func (h *Handler) GetItemDetailInterfaceHandler(ctx *fiber.Ctx) error {
 	}
 	item, err := h.repo.GetItemById(ctx.Context(), int64(id))
 	if err != nil {
-		return ctx.Status(404).SendString("cannot find item")
+		return ctx.Status(404).JSON(h.ui.CreateNotFoundInterface())
 	}
 	component := h.ui.CreateItemDetailInterface(*item)
 	return ctx.JSON(component)

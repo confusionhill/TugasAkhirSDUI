@@ -23,6 +23,8 @@
 		FF7CF6F02B1771F7005F401D /* TextfieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CF6EF2B1771F7005F401D /* TextfieldComponent.swift */; };
 		FF7CF6F32B177D3E005F401D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CF6F22B177D3E005F401D /* LoginView.swift */; };
 		FF7CF6F62B178310005F401D /* NavigationInfra.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CF6F52B178310005F401D /* NavigationInfra.swift */; };
+		FFB58A3C2B44099900489122 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB58A3B2B44099900489122 /* NetworkManager.swift */; };
+		FFB58A3E2B4409B000489122 /* NetworkConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB58A3D2B4409B000489122 /* NetworkConstant.swift */; };
 		FFC7A1C82B05717C006AA569 /* SDUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7A1C72B05717C006AA569 /* SDUIView.swift */; };
 		FFC7A1CB2B05738C006AA569 /* SDUIViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7A1CA2B05738C006AA569 /* SDUIViewModel.swift */; };
 		FFC7A1CE2B0579BB006AA569 /* NavigationComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC7A1CD2B0579BB006AA569 /* NavigationComponent.swift */; };
@@ -47,6 +49,8 @@
 		FF7CF6EF2B1771F7005F401D /* TextfieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldComponent.swift; sourceTree = "<group>"; };
 		FF7CF6F22B177D3E005F401D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FF7CF6F52B178310005F401D /* NavigationInfra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationInfra.swift; sourceTree = "<group>"; };
+		FFB58A3B2B44099900489122 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FFB58A3D2B4409B000489122 /* NetworkConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstant.swift; sourceTree = "<group>"; };
 		FFC7A1C72B05717C006AA569 /* SDUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUIView.swift; sourceTree = "<group>"; };
 		FFC7A1CA2B05738C006AA569 /* SDUIViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUIViewModel.swift; sourceTree = "<group>"; };
 		FFC7A1CD2B0579BB006AA569 /* NavigationComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationComponent.swift; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 		FF7CF6F12B17787F005F401D /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FFB58A3B2B44099900489122 /* NetworkManager.swift */,
+				FFB58A3D2B4409B000489122 /* NetworkConstant.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFB58A3C2B44099900489122 /* NetworkManager.swift in Sources */,
 				FF696AAF2AFFB2E7007CF921 /* ImageComponent.swift in Sources */,
 				FFC7A1CB2B05738C006AA569 /* SDUIViewModel.swift in Sources */,
 				FF696AA12AFFAAF5007CF921 /* TextComponent.swift in Sources */,
@@ -316,6 +323,7 @@
 				FF7CF6F62B178310005F401D /* NavigationInfra.swift in Sources */,
 				FF696A892AFFA298007CF921 /* ContentView.swift in Sources */,
 				FF7CF6F02B1771F7005F401D /* TextfieldComponent.swift in Sources */,
+				FFB58A3E2B4409B000489122 /* NetworkConstant.swift in Sources */,
 				FF696AA42AFFAB64007CF921 /* SpacerComponent.swift in Sources */,
 				FF696A872AFFA298007CF921 /* SDUI_EngineApp.swift in Sources */,
 				FF696A9E2AFFA4BA007CF921 /* StackComponent.swift in Sources */,
