@@ -1,13 +1,15 @@
 package components
 
 const (
-	STACK_TYPE       = "stack"
-	TEXT_TYPE        = "text"
-	SPACER_TYPE      = "spacer"
-	BUTTON_TYPE      = "button"
-	NAVIGATION_TYPE  = "navigation"
-	STACK_VERTICAL   = "vertical"
-	STACK_HORIZONTAL = "horizontal"
+	STACK_TYPE        = "stack"
+	TEXT_TYPE         = "text"
+	SPACER_TYPE       = "spacer"
+	BUTTON_TYPE       = "button"
+	NAVIGATION_TYPE   = "navigation"
+	CIRCULAR_IMG_TYPE = "circular_img"
+	NORMAL_IMG_TYPE   = "normal_img"
+	STACK_VERTICAL    = "vertical"
+	STACK_HORIZONTAL  = "horizontal"
 )
 
 type Component struct {
@@ -44,11 +46,13 @@ type NavigationComponentInfo struct {
 }
 
 type ImageComponentInfo struct {
-	Uid string `json:"uid"`
+	Uid      string `json:"uid"`
+	ImageURL string `json:"image_url"`
 }
 
 type CircularImageComponentInfo struct {
-	Uid string `json:"uid"`
+	Uid      string `json:"uid"`
+	ImageURL string `json:"image_url"`
 }
 
 type TextFieldComponentInfo struct {
