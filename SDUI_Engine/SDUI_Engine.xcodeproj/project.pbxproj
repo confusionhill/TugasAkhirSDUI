@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		887ECA198309997A1827CD32 /* Pods_SDUI_Engine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 682F815BE29C2FE082C2DDDA /* Pods_SDUI_Engine.framework */; };
 		FF696A872AFFA298007CF921 /* SDUI_EngineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696A862AFFA298007CF921 /* SDUI_EngineApp.swift */; };
 		FF696A892AFFA298007CF921 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696A882AFFA298007CF921 /* ContentView.swift */; };
 		FF696A8B2AFFA29A007CF921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF696A8A2AFFA29A007CF921 /* Assets.xcassets */; };
@@ -32,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		487B60BBE2E16678CAA0B4DB /* Pods-SDUI_Engine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDUI_Engine.release.xcconfig"; path = "Target Support Files/Pods-SDUI_Engine/Pods-SDUI_Engine.release.xcconfig"; sourceTree = "<group>"; };
+		682F815BE29C2FE082C2DDDA /* Pods_SDUI_Engine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDUI_Engine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE28B4E4B87442BDB5334058 /* Pods-SDUI_Engine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDUI_Engine.debug.xcconfig"; path = "Target Support Files/Pods-SDUI_Engine/Pods-SDUI_Engine.debug.xcconfig"; sourceTree = "<group>"; };
 		FF696A832AFFA298007CF921 /* SDUI_Engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDUI_Engine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF696A862AFFA298007CF921 /* SDUI_EngineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUI_EngineApp.swift; sourceTree = "<group>"; };
 		FF696A882AFFA298007CF921 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,17 +66,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				887ECA198309997A1827CD32 /* Pods_SDUI_Engine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D4E2E4FF7F49EE13D67558D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				682F815BE29C2FE082C2DDDA /* Pods_SDUI_Engine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6EC14265897DA04815BF6AD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DE28B4E4B87442BDB5334058 /* Pods-SDUI_Engine.debug.xcconfig */,
+				487B60BBE2E16678CAA0B4DB /* Pods-SDUI_Engine.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FF696A7A2AFFA298007CF921 = {
 			isa = PBXGroup;
 			children = (
 				FF696A852AFFA298007CF921 /* SDUI_Engine */,
 				FF696A842AFFA298007CF921 /* Products */,
+				6EC14265897DA04815BF6AD6 /* Pods */,
+				2D4E2E4FF7F49EE13D67558D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -248,9 +273,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FF696A912AFFA29A007CF921 /* Build configuration list for PBXNativeTarget "SDUI_Engine" */;
 			buildPhases = (
+				02833D7791C49073471E700B /* [CP] Check Pods Manifest.lock */,
 				FF696A7F2AFFA298007CF921 /* Sources */,
 				FF696A802AFFA298007CF921 /* Frameworks */,
 				FF696A812AFFA298007CF921 /* Resources */,
+				35E8E8714F817431A16239AB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -306,6 +333,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02833D7791C49073471E700B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SDUI_Engine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35E8E8714F817431A16239AB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDUI_Engine/Pods-SDUI_Engine-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SDUI_Engine/Pods-SDUI_Engine-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SDUI_Engine/Pods-SDUI_Engine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FF696A7F2AFFA298007CF921 /* Sources */ = {
@@ -453,6 +522,7 @@
 		};
 		FF696A922AFFA29A007CF921 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DE28B4E4B87442BDB5334058 /* Pods-SDUI_Engine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -482,6 +552,7 @@
 		};
 		FF696A932AFFA29A007CF921 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 487B60BBE2E16678CAA0B4DB /* Pods-SDUI_Engine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
