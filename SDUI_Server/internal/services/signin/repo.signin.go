@@ -18,7 +18,7 @@ func NewRepo(db *sqlx.DB) (*Repository, error) {
 }
 
 func (r *Repository) SignInUser(ctx context.Context, username string, password string) (string, error) {
-	return internal.AuthKey, nil
+	return internal.AUTH_KEY, nil
 }
 
 func (r *Repository) GetUserInformation(ctx context.Context) entity.UserEntity {

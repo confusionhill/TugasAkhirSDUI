@@ -1,11 +1,13 @@
 package components
 
 const (
-	STACK_TYPE      = "stack"
-	TEXT_TYPE       = "text"
-	SPACER_TYPE     = "spacer"
-	BUTTON_TYPE     = "button"
-	NAVIGATION_TYPE = "navigation"
+	STACK_TYPE       = "stack"
+	TEXT_TYPE        = "text"
+	SPACER_TYPE      = "spacer"
+	BUTTON_TYPE      = "button"
+	NAVIGATION_TYPE  = "navigation"
+	STACK_VERTICAL   = "vertical"
+	STACK_HORIZONTAL = "horizontal"
 )
 
 type Component struct {

@@ -17,11 +17,28 @@ func (ui *UserInterface) CreateItemCardInterface(items []entity.ItemEntity) []co
 	compos := []components.Component{}
 	for _, item := range items {
 		compos = append(compos, components.Component{
-			Type: components.TEXT_TYPE,
-			Information: components.TextComponentInfo{
-				Uid:     uuid.NewString(),
-				Message: item.Title,
-				Size:    10,
+			Type: components.STACK_TYPE,
+			Information: components.StackComponentInfo{
+				Uid:  uuid.NewString(),
+				Type: components.STACK_HORIZONTAL,
+				Children: []components.Component{
+					{
+						Type: components.TEXT_TYPE,
+						Information: components.TextComponentInfo{
+							Uid:     uuid.NewString(),
+							Message: item.Title,
+							Size:    10,
+						},
+					},
+					{
+						Type: components.TEXT_TYPE,
+						Information: components.TextComponentInfo{
+							Uid:     uuid.NewString(),
+							Message: item.Category,
+							Size:    10,
+						},
+					},
+				},
 			},
 		})
 	}
