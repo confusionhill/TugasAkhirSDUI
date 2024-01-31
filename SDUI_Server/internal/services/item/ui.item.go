@@ -38,6 +38,13 @@ func (ui *UserInterface) CreateItemCardInterface(items []entity.ItemEntity) []co
 							Size:    10,
 						},
 					},
+					{
+						Type: components.SPACER_TYPE,
+						Information: components.SpacerComponentInfo{
+							Uid:    uuid.NewString(),
+							Length: nil,
+						},
+					},
 				},
 			},
 		})

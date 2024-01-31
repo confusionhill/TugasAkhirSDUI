@@ -1,6 +1,7 @@
 package item
 
 import (
+	"SDUI_Server/internal/model/dto"
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -52,7 +53,11 @@ func (h *Handler) GetListOfItemInterfaceHandler(c *fiber.Ctx) error {
 		return c.JSON(items)
 	}
 	components := h.ui.CreateItemCardInterface(items)
-	return c.JSON(components)
+	return c.JSON(dto.SDUIResponseDTO{
+		Title:  "Items",
+		Header: nil,
+		Body:   components,
+	})
 }
 
 func (h *Handler) GetItemDetailInterfaceHandler(ctx *fiber.Ctx) error {
@@ -68,6 +73,10 @@ func (h *Handler) GetItemDetailInterfaceHandler(ctx *fiber.Ctx) error {
 	if err != nil {
 		return ctx.Status(404).JSON(h.ui.CreateNotFoundInterface())
 	}
-	component := h.ui.CreateItemDetailInterface(*item)
-	return ctx.JSON(component)
+	body := h.ui.CreateItemDetailInterface(*item)
+	return ctx.JSON(dto.SDUIResponseDTO{
+		Title:  item.Title,
+		Header: nil,
+		Body:   body,
+	})
 }
