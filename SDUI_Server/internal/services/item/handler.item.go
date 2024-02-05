@@ -1,7 +1,6 @@
 package item
 
 import (
-	"SDUI_Server/internal/model/dto"
 	"github.com/gofiber/fiber/v2"
 )
 
@@ -43,40 +42,4 @@ func (h *Handler) GetItemDetailHandler(c *fiber.Ctx) error {
 		return c.Status(404).SendString("cannot find item")
 	}
 	return c.JSON(item)
-}
-
-func (h *Handler) GetListOfItemInterfaceHandler(c *fiber.Ctx) error {
-	page := c.QueryInt("page", 1)
-	limit := c.QueryInt("limit", 10)
-	items, err := h.repo.GetItems(c.Context(), uint64(page), uint64(limit))
-	if err != nil {
-		return c.JSON(items)
-	}
-	components := h.ui.CreateItemCardInterface(items)
-	return c.JSON(dto.SDUIResponseDTO{
-		Title:  "Items",
-		Header: nil,
-		Body:   components,
-	})
-}
-
-func (h *Handler) GetItemDetailInterfaceHandler(ctx *fiber.Ctx) error {
-	//_, ok := c.GetReqHeaders()["bearer"]
-	//if !ok {
-	//
-	//}
-	id, err := ctx.ParamsInt("id")
-	if err != nil {
-		return ctx.Status(404).SendString("cannot find item")
-	}
-	item, err := h.repo.GetItemById(ctx.Context(), int64(id))
-	if err != nil {
-		return ctx.Status(404).JSON(h.ui.CreateNotFoundInterface())
-	}
-	body := h.ui.CreateItemDetailInterface(*item)
-	return ctx.JSON(dto.SDUIResponseDTO{
-		Title:  item.Title,
-		Header: nil,
-		Body:   body,
-	})
 }

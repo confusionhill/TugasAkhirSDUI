@@ -92,3 +92,10 @@ func (ui *UserInterface) CreateNotFoundInterface() []components.Component {
 		},
 	}
 }
+
+func (ui *UserInterface) CreateHeader(isAuth bool) []components.Component {
+	if !isAuth {
+		return make([]components.Component, 0)
+	}
+	return make([]components.Component, 0)
+}

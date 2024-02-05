@@ -6,12 +6,24 @@
 //
 
 import SwiftUI
+import SwiftyJSON
 
 struct ButtonComponent: UIComponent {
     var children: [UIComponent] = []
     
     var uid: String
     var child: UIComponent?
+    
+    init(children: [UIComponent], uid: String, child: UIComponent? = nil) {
+        self.children = children
+        self.uid = uid
+        self.child = child
+    }
+    
+    init(info: JSON, child: UIComponent) {
+        self.uid = info["uid"].stringValue
+        self.child = child
+    }
     
     func renderUI(delegate: UIDelegate) -> AnyView {
         return Button {

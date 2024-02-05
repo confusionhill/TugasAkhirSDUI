@@ -1,0 +1,50 @@
+{
+  "title": "Zahrir",
+  "header": [],
+  "body": [
+    {
+      "type": "spacer",
+      "info": {
+        "uid": "sdkdhfgdjkhg",
+        "length": 20
+      }
+    },
+    {
+      "type": "text_field",
+      "info": {
+        "uid": "username",
+        "is_secure": false,
+        "title": "username"
+      }
+    },
+    {
+      "type": "text_field",
+      "info": {
+        "uid": "password",
+        "is_secure": true,
+        "title": "password"
+      }
+    },
+    {
+      "type": "button",
+      "info": {
+        "uid": "sign_in_btn",
+        "child": {
+          "type": "text",
+          "info": {
+            "uid": "c2a1246a-1345-4d8c-bc78-efb55333008c",
+            "message": "Sign In",
+            "size": 20
+          }
+        }
+      }
+    },
+    {
+      "type": "spacer",
+      "info": {
+        "uid": "d3fa24ca-982f-4c12-87cc-455e25bc5c62",
+        "length": null
+      }
+    }
+  ]
+}

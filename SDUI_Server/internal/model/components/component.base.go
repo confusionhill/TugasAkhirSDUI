@@ -3,6 +3,7 @@ package components
 const (
 	STACK_TYPE        = "stack"
 	TEXT_TYPE         = "text"
+	TEXT_FIELD_TYPE   = "text_field"
 	SPACER_TYPE       = "spacer"
 	BUTTON_TYPE       = "button"
 	NAVIGATION_TYPE   = "navigation"
@@ -34,6 +35,8 @@ type SpacerComponentInfo struct {
 	Length *float64 `json:"length"`
 }
 
+const SIGN_IN_BTN = "sign_in_btn"
+
 type ButtonComponentInfo struct {
 	Uid   string    `json:"uid"`
 	Child Component `json:"child"`
@@ -54,6 +57,11 @@ type CircularImageComponentInfo struct {
 	Uid      string `json:"uid"`
 	ImageURL string `json:"image_url"`
 }
+
+const (
+	USERNAME_TXTFLD  = "username"
+	PASSSWORD_TXTFLD = "password"
+)
 
 type TextFieldComponentInfo struct {
 	Uid      string `json:"uid"`

@@ -1,31 +1,322 @@
-{
-    "title": "SDUI View",
-    "components": [
+[
+  {
+    "type": "stack",
+    "info": {
+      "uid": "0cc3007d-f06f-4ff0-b180-dce1e371b675",
+      "type": "horizontal",
+      "children": [
         {
-            "type": "stack".
-            "properties": {
-                "type": "vertical",
-                "children": [
-                        {
-                            "type": "text",
-                            "properties": {
-                                "message": "hello, world!"
-                            }
-                        },
-                        {
-                            "type": "spacer",
-                            "properties": {
-                                "length": 10.1
-                            }
-                        },
-                        {
-                            "type": "text",
-                            "properties": {
-                                "message": "welcome to mobile legend!"
-                            }
-                        }
-                ]
-            }
+          "type": "text",
+          "info": {
+            "uid": "7a365c0c-19d3-4132-a121-a5dc0b75dc66",
+            "message": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+            "size": 10
+          }
         },
-    ]
-}
+        {
+          "type": "text",
+          "info": {
+            "uid": "b69847f0-b86b-446f-b668-e677652e7a77",
+            "message": "men's clothing",
+            "size": 10
+          }
+        },
+        {
+          "type": "spacer",
+          "info": {
+            "uid": "d02b5945-2121-47fa-b852-5ae2dfc89c7e",
+            "length": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "stack",
+    "info": {
+      "uid": "07ec3f5a-817e-4dbc-94b0-adc4b79a3a00",
+      "type": "horizontal",
+      "children": [
+        {
+          "type": "text",
+          "info": {
+            "uid": "0fd1aae1-4712-4567-bf09-d0805224d364",
+            "message": "Mens Casual Premium Slim Fit T-Shirts ",
+            "size": 10
+          }
+        },
+        {
+          "type": "text",
+          "info": {
+            "uid": "55e52d36-a5d6-45a7-85a5-f886092d2dc4",
+            "message": "men's clothing",
+            "size": 10
+          }
+        },
+        {
+          "type": "spacer",
+          "info": {
+            "uid": "866cbbd1-cc37-4bd5-b240-c0e1791be4f3",
+            "length": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "stack",
+    "info": {
+      "uid": "7f127fb2-1968-434f-9e27-f848da74793e",
+      "type": "horizontal",
+      "children": [
+        {
+          "type": "text",
+          "info": {
+            "uid": "a58a1d4d-6d5c-4d35-97c0-bf3e42e16b81",
+            "message": "Mens Cotton Jacket",
+            "size": 10
+          }
+        },
+        {
+          "type": "text",
+          "info": {
+            "uid": "aa6e3b09-83e5-4327-9ef3-3d0f226b8038",
+            "message": "men's clothing",
+            "size": 10
+          }
+        },
+        {
+          "type": "spacer",
+          "info": {
+            "uid": "ba484056-4c75-4b41-a97f-631edaf35676",
+            "length": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "stack",
+    "info": {
+      "uid": "76e9a9c5-8306-44b1-bc9b-db15087d7210",
+      "type": "horizontal",
+      "children": [
+        {
+          "type": "text",
+          "info": {
+            "uid": "d19fc84b-425d-4a94-b0d1-c251c622a6ee",
+            "message": "Mens Casual Slim Fit",
+            "size": 10
+          }
+        },
+        {
+          "type": "text",
+          "info": {
+            "uid": "104d34c6-da3c-4e45-a1ca-bed427cfb8a9",
+            "message": "men's clothing",
+            "size": 10
+          }
+        },
+        {
+          "type": "spacer",
+          "info": {
+            "uid": "a0921e5a-6dee-4367-9acb-6116f7fe6bf5",
+            "length": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "stack",
+    "info": {
+      "uid": "d7822ab0-bb25-441c-a57a-63e580205524",
+      "type": "horizontal",
+      "children": [
+        {
+          "type": "text",
+          "info": {
+            "uid": "41eceef0-d92c-4e01-86f1-801f359f2a3a",
+            "message": "John Hardy Women's Legends Naga Gold & Silver Dragon Station Chain Bracelet",
+            "size": 10
+          }
+        },
+        {
+          "type": "text",
+          "info": {
+            "uid": "c68c5077-bc53-4d89-8bce-6b82670ece09",
+            "message": "jewelery",
+            "size": 10
+          }
+        },
+        {
+          "type": "spacer",
+          "info": {
+            "uid": "f88fd3ea-51f9-4b1a-9b09-da7cbac376cf",
+            "length": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "stack",
+    "info": {
+      "uid": "f836957e-e97f-4803-bc93-9157ab126fc2",
+      "type": "horizontal",
+      "children": [
+        {
+          "type": "text",
+          "info": {
+            "uid": "cd164f7f-df6c-4275-868a-94e6c2858e70",
+            "message": "Solid Gold Petite Micropave ",
+            "size": 10
+          }
+        },
+        {
+          "type": "text",
+          "info": {
+            "uid": "1b39bfb8-35b5-4f69-9356-c2c699396f84",
+            "message": "jewelery",
+            "size": 10
+          }
+        },
+        {
+          "type": "spacer",
+          "info": {
+            "uid": "6310c798-4878-4356-abb4-bc76a66dd3cb",
+            "length": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "stack",
+    "info": {
+      "uid": "9a93a3c0-a260-4f0e-91b5-9990f9573d83",
+      "type": "horizontal",
+      "children": [
+        {
+          "type": "text",
+          "info": {
+            "uid": "af29bdb0-2ba4-4ecc-8c63-5eb905e1ce61",
+            "message": "White Gold Plated Princess",
+            "size": 10
+          }
+        },
+        {
+          "type": "text",
+          "info": {
+            "uid": "e2ec59b2-5d3d-4efd-98c5-a2dab8c56b44",
+            "message": "jewelery",
+            "size": 10
+          }
+        },
+        {
+          "type": "spacer",
+          "info": {
+            "uid": "bc0d21f8-2dab-41d9-945d-f3cf49c1a0fd",
+            "length": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "stack",
+    "info": {
+      "uid": "5aa51d15-6a79-4dc7-b4f3-2c7a3807d301",
+      "type": "horizontal",
+      "children": [
+        {
+          "type": "text",
+          "info": {
+            "uid": "2de02279-8fbe-434f-b01c-39650e37918a",
+            "message": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+            "size": 10
+          }
+        },
+        {
+          "type": "text",
+          "info": {
+            "uid": "db16c9e7-83b4-46ee-b0c2-c4c61c13cfa4",
+            "message": "jewelery",
+            "size": 10
+          }
+        },
+        {
+          "type": "spacer",
+          "info": {
+            "uid": "b681fb1c-6bc3-4458-ac1a-018e8e25229a",
+            "length": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "stack",
+    "info": {
+      "uid": "250a00fb-1d19-4cc1-b28c-a69e6df0e979",
+      "type": "horizontal",
+      "children": [
+        {
+          "type": "text",
+          "info": {
+            "uid": "8b1c277d-ae8a-4d34-a6b1-4bb8b084c480",
+            "message": "WD 2TB Elements Portable External Hard Drive - USB 3.0 ",
+            "size": 10
+          }
+        },
+        {
+          "type": "text",
+          "info": {
+            "uid": "139bc6f9-5ae1-4169-9426-b068a1888102",
+            "message": "electronics",
+            "size": 10
+          }
+        },
+        {
+          "type": "spacer",
+          "info": {
+            "uid": "e36128ad-a7c2-443c-b0c8-6597e4ee260b",
+            "length": null
+          }
+        }
+      ]
+    }
+  },
+  {
+    "type": "stack",
+    "info": {
+      "uid": "1846ab0f-71f7-46f3-b008-a7a8d455f9cc",
+      "type": "horizontal",
+      "children": [
+        {
+          "type": "text",
+          "info": {
+            "uid": "365c37a7-b4e1-4923-b80c-cb6d231a5aa2",
+            "message": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+            "size": 10
+          }
+        },
+        {
+          "type": "text",
+          "info": {
+            "uid": "e814a7c5-733e-4261-9daf-6e5a76bad6cb",
+            "message": "electronics",
+            "size": 10
+          }
+        },
+        {
+          "type": "spacer",
+          "info": {
+            "uid": "06a475e7-e30b-4d94-97b9-5dd1d409dfcf",
+            "length": null
+          }
+        }
+      ]
+    }
+  }
+]

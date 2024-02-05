@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+struct ItemEntity: Codable {
+    let id: Int
+    let title: String
+    let price: Double
+    let description: String
+    let category: String
+    let image: String
+    let rate: Double
+    let count: Int
+}

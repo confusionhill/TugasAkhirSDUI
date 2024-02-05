@@ -53,12 +53,20 @@ func (h *Handler) SignInUserHandler(c *fiber.Ctx) error {
 	})
 }
 
+// SDUI
+
 func (h *Handler) GetUserInformationInterfaceHandler(ctx *fiber.Ctx) error {
-	resp, _ := h.repo.SignInUser(ctx.Context(), "", "")
-	return ctx.JSON(resp)
+	header := h.ui.Header()
+	body := h.ui.UserFoundInterface(true)
+	return ctx.JSON(dto.SDUIResponseDTO{
+		Title:  "Zahrir",
+		Header: header,
+		Body:   body,
+	})
 }
 
 func (h *Handler) SignInUserInterfaceHandler(ctx *fiber.Ctx) error {
 	resp, _ := h.repo.SignInUser(ctx.Context(), "", "")
+	//header := h.ui.Header()
 	return ctx.JSON(resp)
 }

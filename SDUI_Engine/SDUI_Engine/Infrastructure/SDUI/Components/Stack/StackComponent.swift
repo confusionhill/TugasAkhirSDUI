@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftyJSON
 
 struct StackComponent: UIComponent {
     enum StackType: String {
@@ -21,6 +22,20 @@ struct StackComponent: UIComponent {
 //    let minHeight: CGFloat?
 //    let maxHeight: CGFloat?
 //
+    init(uid: String, type: StackType, children: [UIComponent], child: UIComponent? = nil) {
+        self.uid = uid
+        self.type = type
+        self.children = children
+        self.child = child
+    }
+    
+    init(json: JSON, children: [UIComponent]) {
+        self.uid = json["uid"].string ?? UUID().uuidString
+        let type = json["type"].string ?? "vertical"
+        self.type = StackType(rawValue: type) ?? .vertical
+        self.children = children
+    }
+    
     func renderUI(delegate: UIDelegate) -> AnyView {
         switch self.type {
         case .vertical:

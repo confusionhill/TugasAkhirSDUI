@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftyJSON
 
 final class TextFieldComponentViewModel: ObservableObject {
     @Published var value: String = ""
@@ -21,6 +22,20 @@ struct TextfieldComponent: UIComponent {
     let title: String
     
     let viewModel = TextFieldComponentViewModel()
+    
+    init(children: [UIComponent], child: UIComponent? = nil, uid: String, isSecure: Bool, title: String) {
+        self.children = children
+        self.child = child
+        self.uid = uid
+        self.isSecure = isSecure
+        self.title = title
+    }
+    
+    init(json: JSON) {
+        self.uid = json["uid"].stringValue
+        self.isSecure = json["is_secure"].boolValue
+        self.title = json["title"].stringValue
+    }
     
     func renderUI(delegate: UIDelegate) -> AnyView {
         return TextfieldView(

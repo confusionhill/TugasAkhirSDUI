@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+enum ComponentTypes: String {
+    case text = "text"
+    case textField = "text_field"
+    case spacer = "spacer"
+    case stack = "stack"
+    case button = "button"
+    case none = "none"
+}

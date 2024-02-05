@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		887ECA198309997A1827CD32 /* Pods_SDUI_Engine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 682F815BE29C2FE082C2DDDA /* Pods_SDUI_Engine.framework */; };
+		FF0DDE492B6A83620014597D /* LocalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0DDE482B6A83620014597D /* LocalManager.swift */; };
+		FF0DDE4B2B6A87170014597D /* ComponentTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0DDE4A2B6A87170014597D /* ComponentTypes.swift */; };
 		FF696A872AFFA298007CF921 /* SDUI_EngineApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696A862AFFA298007CF921 /* SDUI_EngineApp.swift */; };
 		FF696A892AFFA298007CF921 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696A882AFFA298007CF921 /* ContentView.swift */; };
 		FF696A8B2AFFA29A007CF921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF696A8A2AFFA29A007CF921 /* Assets.xcassets */; };
@@ -20,6 +22,7 @@
 		FF696AA72AFFABEA007CF921 /* Example.json in Resources */ = {isa = PBXBuildFile; fileRef = FF696AA62AFFABEA007CF921 /* Example.json */; };
 		FF696AAC2AFFAFA2007CF921 /* ButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696AAB2AFFAFA2007CF921 /* ButtonComponent.swift */; };
 		FF696AAF2AFFB2E7007CF921 /* ImageComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696AAE2AFFB2E7007CF921 /* ImageComponent.swift */; };
+		FF6F502F2B7156CB00350FFE /* example2.json in Resources */ = {isa = PBXBuildFile; fileRef = FF6F502E2B7156CB00350FFE /* example2.json */; };
 		FF7CF6ED2B175D61005F401D /* HorizontalScrollComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CF6EC2B175D61005F401D /* HorizontalScrollComponent.swift */; };
 		FF7CF6F02B1771F7005F401D /* TextfieldComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CF6EF2B1771F7005F401D /* TextfieldComponent.swift */; };
 		FF7CF6F32B177D3E005F401D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7CF6F22B177D3E005F401D /* LoginView.swift */; };
@@ -36,6 +39,8 @@
 		487B60BBE2E16678CAA0B4DB /* Pods-SDUI_Engine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDUI_Engine.release.xcconfig"; path = "Target Support Files/Pods-SDUI_Engine/Pods-SDUI_Engine.release.xcconfig"; sourceTree = "<group>"; };
 		682F815BE29C2FE082C2DDDA /* Pods_SDUI_Engine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SDUI_Engine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE28B4E4B87442BDB5334058 /* Pods-SDUI_Engine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDUI_Engine.debug.xcconfig"; path = "Target Support Files/Pods-SDUI_Engine/Pods-SDUI_Engine.debug.xcconfig"; sourceTree = "<group>"; };
+		FF0DDE482B6A83620014597D /* LocalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalManager.swift; sourceTree = "<group>"; };
+		FF0DDE4A2B6A87170014597D /* ComponentTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentTypes.swift; sourceTree = "<group>"; };
 		FF696A832AFFA298007CF921 /* SDUI_Engine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDUI_Engine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF696A862AFFA298007CF921 /* SDUI_EngineApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDUI_EngineApp.swift; sourceTree = "<group>"; };
 		FF696A882AFFA298007CF921 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +54,7 @@
 		FF696AA62AFFABEA007CF921 /* Example.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Example.json; sourceTree = "<group>"; };
 		FF696AAB2AFFAFA2007CF921 /* ButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComponent.swift; sourceTree = "<group>"; };
 		FF696AAE2AFFB2E7007CF921 /* ImageComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComponent.swift; sourceTree = "<group>"; };
+		FF6F502E2B7156CB00350FFE /* example2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = example2.json; sourceTree = "<group>"; };
 		FF7CF6EC2B175D61005F401D /* HorizontalScrollComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalScrollComponent.swift; sourceTree = "<group>"; };
 		FF7CF6EF2B1771F7005F401D /* TextfieldComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldComponent.swift; sourceTree = "<group>"; };
 		FF7CF6F22B177D3E005F401D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -87,7 +93,6 @@
 				DE28B4E4B87442BDB5334058 /* Pods-SDUI_Engine.debug.xcconfig */,
 				487B60BBE2E16678CAA0B4DB /* Pods-SDUI_Engine.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -173,6 +178,7 @@
 				FF696A9F2AFFAAEB007CF921 /* Text */,
 				FF696A9C2AFFA4B1007CF921 /* Stack */,
 				FF696A9A2AFFA2F9007CF921 /* BaseComponent.swift */,
+				FF0DDE4A2B6A87170014597D /* ComponentTypes.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -205,6 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				FF696AA62AFFABEA007CF921 /* Example.json */,
+				FF0DDE482B6A83620014597D /* LocalManager.swift */,
+				FF6F502E2B7156CB00350FFE /* example2.json */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -329,6 +337,7 @@
 				FF696A8E2AFFA29A007CF921 /* Preview Assets.xcassets in Resources */,
 				FF696AA72AFFABEA007CF921 /* Example.json in Resources */,
 				FF696A8B2AFFA29A007CF921 /* Assets.xcassets in Resources */,
+				FF6F502F2B7156CB00350FFE /* example2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,9 +405,11 @@
 				FF696AA42AFFAB64007CF921 /* SpacerComponent.swift in Sources */,
 				FF696A872AFFA298007CF921 /* SDUI_EngineApp.swift in Sources */,
 				FF696A9E2AFFA4BA007CF921 /* StackComponent.swift in Sources */,
+				FF0DDE492B6A83620014597D /* LocalManager.swift in Sources */,
 				FF696A982AFFA2C5007CF921 /* EngineSDUI.swift in Sources */,
 				FFC7A1D02B0580AD006AA569 /* HexColor.swift in Sources */,
 				FF7CF6F32B177D3E005F401D /* LoginView.swift in Sources */,
+				FF0DDE4B2B6A87170014597D /* ComponentTypes.swift in Sources */,
 				FF696AAC2AFFAFA2007CF921 /* ButtonComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
