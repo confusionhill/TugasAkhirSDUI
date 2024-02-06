@@ -8,7 +8,7 @@
 import Foundation
 
 func LoadLocalJSON() -> Data? {
-    guard let url = Bundle.main.url(forResource: "Example", withExtension: "json") else {
+    guard let url = Bundle.main.url(forResource: "example2", withExtension: "json") else {
         return nil
     }
     do {

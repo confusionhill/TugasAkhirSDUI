@@ -8,17 +8,36 @@
 import SwiftUI
 import SwiftyJSON
 
+struct RootElement {
+    let title: String
+    let header: [UIComponent]
+    let body: [UIComponent]
+}
+
 final class SDUIEngine {
     
-    func render(data: Data) -> [UIComponent] {
-        var components: [UIComponent] = []
+    func render(data: Data) -> RootElement {
         guard let json = try? JSON(data: data) else {
-            return components
+            return RootElement(
+                title: "none",
+                header: [],
+                body: [])
         }
-        for obj in json.arrayValue {
-            components.append(build(json: obj))
+        let title = json["title"].string ?? "none"
+        let header = json["header"].array ?? []
+        var headerComponent: [UIComponent] = []
+        for obj in header {
+            headerComponent.append(build(json: obj))
         }
-        return components
+        let body = json["body"].array ?? []
+        var bodyComponent: [UIComponent] = []
+        for obj in body {
+            bodyComponent.append(build(json: obj))
+        }
+        return RootElement(
+            title: title,
+            header: headerComponent,
+            body: bodyComponent)
     }
     
     private func build(json: JSON) -> UIComponent {

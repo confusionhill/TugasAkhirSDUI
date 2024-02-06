@@ -10,11 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-            NavigationLink {
-                SDUIView(viewModel: .init(to: ""))
-            } label: {
-                Text("SDUIView")
-            }
+            SDUIView(viewModel: .init(constant: .itemList))
         }
     }
 }

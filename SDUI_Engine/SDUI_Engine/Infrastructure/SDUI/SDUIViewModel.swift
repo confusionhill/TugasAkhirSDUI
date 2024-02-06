@@ -26,15 +26,20 @@ final class SDUIViewModel: SDUIViewModelInterface {
     @Published var didAppear: Bool = false
     
     private let engine = SDUIEngine()
+    private let network = NetworkManager.shared
     
-    let url: String
+    let constant: NetworkConstant
     
     func onRefresh() {
         
     }
     
     init(to url: String) {
-        self.url = url
+        self.constant = NetworkConstant.custom(to: url)
+    }
+    
+    init(constant: NetworkConstant) {
+        self.constant = constant
     }
     
     func findComponentById(uid: String) -> UIComponent? {
@@ -47,10 +52,12 @@ final class SDUIViewModel: SDUIViewModelInterface {
     }
     
     func onAppear() {
+//        network.fetch(type: self.constant)
         if let data = LoadLocalJSON() {
-            let compo = engine.render(data: data)
-            
-            self.components = compo
+            let root = engine.render(data: data)
+            self.title = root.title
+            self.navigationBarComponent = root.header
+            self.components = root.body
         }
         self.didAppear = true
     }

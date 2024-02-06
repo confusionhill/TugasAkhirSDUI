@@ -8,6 +8,7 @@
 import Foundation
 
 enum NetworkConstant {
+    case itemList
     case item(id: Int)
     case custom(to: String)
     
@@ -17,6 +18,8 @@ enum NetworkConstant {
     
     private var url: URL? {
         switch self {
+        case .itemList:
+            return URL(string: self.baseURL+"/item")
         case .item(let id):
             return URL(string: self.baseURL+"/item/\(id)")
         case .custom(let to):

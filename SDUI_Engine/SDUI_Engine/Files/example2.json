@@ -6,7 +6,7 @@
       "type": "spacer",
       "info": {
         "uid": "sdkdhfgdjkhg",
-        "length": 20
+        "length": 200
       }
     },
     {
@@ -23,6 +23,13 @@
         "uid": "password",
         "is_secure": true,
         "title": "password"
+      }
+    },
+    {
+      "type": "spacer",
+      "info": {
+        "uid": "luulub878v97589876ufigj",
+        "length": 60
       }
     },
     {

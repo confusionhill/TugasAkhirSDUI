@@ -33,6 +33,7 @@ struct SDUIView: View, UIDelegate {
             self.viewModel.onDissapear()
         })
         .navigationTitle($viewModel.title)
+        .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             VStack {
                 ForEach(viewModel.navigationBarComponent, id: \.uid) { component in
